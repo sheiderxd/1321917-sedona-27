@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Oleg Sheider](https://up.htmlacademy.ru/htmlcss/27/user/1321917).
-* Наставник: `Неизвестно`.
+* Наставник: [Мурат Баркинхоев](https://htmlacademy.ru/profile/id186857).
 
 ---
 
