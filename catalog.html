@@ -20,14 +20,50 @@
     </header>
 
     <main>
-      <h1>Бронирование Гостинниц</h1>
+      <h1 class="visually-hidden">Бронирование Гостинниц</h1>
+
+      <!-- Тестовая попытка сделать форму. Находится в разрабоке.
       <section>
-        <h2>Фильтр гостинниц</h2>
-        <!-- Здесь будет форма фильра гостинниц -->
+        <h2 class="visually-hidden">Фильтр гостинниц</h2>
+        <form action="#" method="get" oninput="pricemin.value=rangemin.value, pricemax.value=rangemax.value">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <input type="checkbox" name="pool" id="pool-filed">
+            <label for="pool-filed">Бассейн</label>
+
+            <input type="checkbox" name="parking" id="parking-filed">
+            <label for="parking-filed">Пароковка</label>
+
+            <input type="checkbox" name="wifi" id="wifi-filed">
+            <label for="wifi-filed">Wi-Fi</label>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <input type="checkbox" name="hotel" id="hotel-filed">
+            <label for="hotel-filed">Гостиница</label>
+
+            <input type="checkbox" name="motel" id="motel-filed">
+            <label for="motel-filed">Мотель</label>
+
+            <input type="checkbox" name="apartments" id="apartments-filed">
+            <label for="apartments-filed">Апартаменты</label>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <output name="pricemin">0</output>
+            <output name="pricemax">3000</output><br>
+            <label for="ragemin" class="visually-hidden">Стоимость от</label>
+            <input type="range" min="0" max="3000" id="rangemin" value="0">
+            <label for="ragemax" class="visually-hidden">Стоимость до</label>
+            <input type="range" min="0" max="3000" id="rangemax" value="3000">
+          </fieldset>
+          <input type="submit" value="Показать">
+        </form>
       </section>
+      -->
 
       <section>
-        <h2>Результат поиска</h2>
+        <h2 class="visually-hidden">Результат поиска</h2>
         <ol>
           <li>
             <h3><a href="#">Amara Resort & Spa</a></h3>

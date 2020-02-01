@@ -77,19 +77,35 @@
       </section>
 
       <section>
-        <h2>Заинтересовались?</h2>
+        <h2 class="visually-hidden">Поиск гостинницы</h2>
+        <p>Заинтересовались?</p>
         <p>
           Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
-        <h3>Поиск гостинницы в седоне</h3>
-        <!-- Здесь будет форма поиска -->
+         <form action="#" method="get">
+            <fieldset>
+              <button type="button">Поиск гостинницы в седоне</button>
+              <label for="arrived-field">Дата заезда:</label>
+              <input type="date" name="arrived" id="arrived-field">
+
+              <label for="leaving-field">Дата выезда:</label>
+              <input type="date" name="leaving" id="leaving-field">
+
+              <label for="child-filed">Дети:</label>
+              <input type="number" name="child" id="child-filed" min="0" max="100">
+
+              <label for="adults-filed">Взрослые:</label>
+              <input type="number" name="adults" id="adults-filed" min="1" max="100">
+            </fieldset>
+            <input type="submit" value="Найти">
+          </form>
       </section>
 
 
       <section>
-        <img src="img/map.jpg" alt="Фото карты седоны" width="1200" height="593"> <!-- На случай если карта не загрузится -->
-        <!-- Здесь будет карта -->
+        <h2 class="visually-hidden">Местонахождение Седоны</h2>
+        <img src="img/map.jpg" alt="Седона город в Аризоне на карте" width="1200" height="593">
       </section>
     </main>
 
@@ -97,7 +113,7 @@
     <footer>
       <div>
         <p>#visitSEDONA</p>
-        <p>Тел: <a href="tel: +7(495) 666-02-66">+7(495) 666-02-66</a></p>
+        <p>Тел: <a href="tel:+7(495)666-02-66">+7(495) 666-02-66</a></p>
       </div>
 
       <div>
