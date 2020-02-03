@@ -24,7 +24,7 @@
 
       <section>
         <h2 class="visually-hidden">Фильтр гостинниц</h2>
-        <form action="#" method="get" oninput="pricemin.value=rangemin.value, pricemax.value=rangemax.value">
+        <form action="https://echo.htmlacademy.ru/" method="get" oninput="pricemin.value=rangemin.value, pricemax.value=rangemax.value">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <input type="checkbox" name="pool" id="pool-filed">
@@ -47,6 +47,7 @@
             <input type="checkbox" name="apartments" id="apartments-filed">
             <label for="apartments-filed">Апартаменты</label>
           </fieldset>
+          <!-- В разработке.
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
             <output name="pricemin">0</output>
@@ -56,6 +57,7 @@
             <label for="rangemax" class="visually-hidden">Стоимость до</label>
             <input type="range" min="0" max="3000" id="rangemax" value="3000">
           </fieldset>
+          -->
           <input type="submit" value="Показать">
         </form>
       </section>
@@ -113,9 +115,9 @@
 
       <div>
         <ul>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Youtube</a></li>
+          <li><a href="#" aria-label="Twitter"></a></li>
+          <li><a href="#" aria-label="Facebook"></a></li>
+          <li><a href="#" aria-label="Youtube"></a></li>
         </ul>
       </div>
 

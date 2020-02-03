@@ -83,22 +83,27 @@
           Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
-         <form action="#" method="get">
-            <fieldset>
+          <form action="https://echo.htmlacademy.ru/" method="get">
               <button type="button">Поиск гостинницы в седоне</button>
               <label for="arrived-field">Дата заезда:</label>
-              <input type="date" name="arrived" id="arrived-field">
+              <input type="text" name="arrived" id="arrived-field" value="24 апреля 2017">
+              <button type="button" aria-label="Выбор даты заезда"></button>
 
               <label for="leaving-field">Дата выезда:</label>
-              <input type="date" name="leaving" id="leaving-field">
+              <input type="text" name="leaving" id="leaving-field" value="4 июля 2017">
+              <button type="button" aria-label="Выбор даты выезда"></button>
 
               <label for="child-filed">Дети:</label>
-              <input type="number" name="child" id="child-filed" min="0" max="100" value="0">
+              <input type="text" name="child" id="child-filed" min="0" max="100" value="0">
+              <button type="button" aria-label="Добавить"></button>
+              <button type="button" aria-label="Убавить"></button>
 
               <label for="adults-filed">Взрослые:</label>
-              <input type="number" name="adults" id="adults-filed" min="1" max="100" value="2">
-            </fieldset>
-            <input type="submit" value="Найти">
+              <input type="text" name="adults" id="adults-filed" min="1" max="100" value="2">
+              <button type="button" aria-label="Добавить"></button>
+              <button type="button" aria-label="Убавить"></button>
+
+              <input type="submit" value="Найти">
           </form>
       </section>
 
@@ -118,9 +123,9 @@
 
       <div>
         <ul>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Youtube</a></li>
+          <li><a href="#" aria-label="Twitter"></a></li>
+          <li><a href="#" aria-label="Facebook"></a></li>
+          <li><a href="#" aria-label="Youtube"></a></li>
         </ul>
       </div>
 
