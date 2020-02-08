@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
+  <body class="inner-page">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <ul class="site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -27,27 +27,27 @@
 
       <section>
         <h2 class="visually-hidden">Фильтр гостинниц</h2>
-        <form action="https://echo.htmlacademy.ru/" method="get" oninput="pricemin.value=rangemin.value, pricemax.value=rangemax.value">
-          <fieldset>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get" oninput="pricemin.value=rangemin.value, pricemax.value=rangemax.value">
+          <fieldset class="checkbox">
             <legend>Инфраструктура:</legend>
-            <input type="checkbox" name="pool" id="pool-filed">
+            <input type="checkbox" name="pool" id="pool-filed" class="visually-hidden">
             <label for="pool-filed">Бассейн</label>
 
-            <input type="checkbox" name="parking" id="parking-filed">
+            <input type="checkbox" name="parking" id="parking-filed" class="visually-hidden">
             <label for="parking-filed">Пароковка</label>
 
-            <input type="checkbox" name="wifi" id="wifi-filed">
+            <input type="checkbox" name="wifi" id="wifi-filed" class="visually-hidden">
             <label for="wifi-filed">Wi-Fi</label>
           </fieldset>
-          <fieldset>
+          <fieldset class="checkbox">
             <legend>Тип жилья:</legend>
-            <input type="checkbox" name="hotel" id="hotel-filed">
+            <input type="checkbox" name="hotel" id="hotel-filed" class="visually-hidden">
             <label for="hotel-filed">Гостиница</label>
 
-            <input type="checkbox" name="motel" id="motel-filed">
+            <input type="checkbox" name="motel" id="motel-filed" class="visually-hidden">
             <label for="motel-filed">Мотель</label>
 
-            <input type="checkbox" name="apartments" id="apartments-filed">
+            <input type="checkbox" name="apartments" id="apartments-filed" class="visually-hidden">
             <label for="apartments-filed">Апартаменты</label>
           </fieldset>
           <!-- В разработке.
@@ -61,48 +61,73 @@
             <input type="range" min="0" max="3000" id="rangemax" value="3000">
           </fieldset>
           -->
-          <input type="submit" value="Показать">
+          <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
 
-      <section>
+      <section class="result">
         <h2 class="visually-hidden">Результат поиска</h2>
-        <div class="sort"><!-- Как верстать сортировку не знаю --></div>
-        <ol>
-          <li>
-            <h3><a href="#">Amara Resort & Spa</a></h3>
+        <form class="sorting">
+          <p>Найдено: 3</p>
+          <h3>сортировка:</h3>
+          <input type="radio" id="radio-price" class="sort-button visually-hidden" name="sorting" checked>
+          <label for="radio-price" class="sorting-label">По цене</label>
+
+          <input type="radio" id="radio-type" class="sort-button visually-hidden" name="sorting">
+          <label for="radio-type" class="sorting-label">По типу</label>
+
+          <input type="radio" id="radio-rate" class="sort-button visually-hidden" name="sorting">
+          <label for="radio-rate" class="sorting-label">По рейтингу</label>
+
+          <input type="radio" name="sort-button" id="sort-up-radio" class="radio-up visually-hidden" aria-label="По возростанию" checked>
+          <label for="sort-up-radio" class="sort-up"></label>
+
+          <input type="radio" name="sort-button" id="sort-down-radio" class="radio-down visually-hidden" aria-label="По убыванию">
+          <label for="sort-down-radio" class="sort-down"></label>
+        </form>
+        <ol class="result-list">
+          <li class="result-item">
+            <h3 class="result-item-title"><a href="#">Amara Resort & Spa</a></h3>
             <p>Гостиница</p>
             <p>От 4000 Р.</p>
             <img src="img/hotel1.jpg" alt="Фото Гостинницы Amara Resort & Spa" width="135" height="90">
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-            <div>
-              <!-- Здесь будет отображатся рейтинг в виде звездочек -->
-              <p>Рейтинг: 8,5</p>
+            <a href="#" class="button-more">Подробнее</a>
+            <a href="#" class="button-reserve">Забронировать</a>
+            <div class="rating">
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <p><span>Рейтинг: 8,5</span></p>
             </div>
           </li>
-          <li>
-            <h3><a href="#">Desert Quail Inn</a></h3>
+          <li class="result-item">
+            <h3 class="result-item-title"><a href="#">Desert Quail Inn</a></h3>
             <p>Мотель</p>
             <p>От 3000 Р.</p>
             <img src="img/hotel2.jpg" alt="Фото Мотеля Desert Quail Inn" width="135" height="90">
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-            <div>
-              <!-- Здесь будет отображатся рейтинг в виде звездочек -->
-              <p>Рейтинг: 8,9</p>
+            <a href="#" class="button-more">Подробнее</a>
+            <a href="#" class="button-reserve">Забронировать</a>
+            <div class="rating">
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <p><span>Рейтинг: 8,9</span></p>
             </div>
           </li>
-          <li>
-            <h3><a href="#">Villas at Poco Diablo</a></h3>
+          <li class="result-item">
+            <h3 class="result-item-title"><a href="#">Villas at Poco Diablo</a></h3>
             <p>Апартаменты</p>
             <p>От 2000 Р.</p>
             <img src="img/hotel3.jpg" alt="Фото Апартаментов Villas at Poco Diablo" width="135" height="90">
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-            <div>
-              <!-- Здесь будет отображатся рейтинг в виде звездочек -->
-              <p>Рейтинг: 9,2</p>
+            <a href="#" class="button-more">Подробнее</a>
+            <a href="#" class="button-reserve">Забронировать</a>
+            <div class="rating">
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <div class="rating-stars"></div>
+              <p><span>Рейтинг: 9,2</span></p>
             </div>
           </li>
         </ol>
@@ -111,25 +136,26 @@
 
 
     <footer>
-      <div>
+      <div class="contacts">
         <p>#visitSEDONA</p>
         <p>Тел: <a href="tel:+7(495)666-02-66">+7(495) 666-02-66</a></p>
       </div>
 
-      <div>
-        <ul>
-          <li><a href="#" aria-label="Twitter"></a></li>
-          <li><a href="#" aria-label="Facebook"></a></li>
-          <li><a href="#" aria-label="Youtube"></a></li>
+      <div class="social-links">
+        <ul class="social-links-list">
+          <li class="social-links-item"><a href="#" aria-label="Twitter"></a><div></div></li>
+          <li class="social-links-item"><a href="#" aria-label="Facebook"></a><div></div></li>
+          <li class="social-links-item"><a href="#" aria-label="Youtube"></a><div></div></li>
         </ul>
       </div>
 
-      <div>
+      <div class="copyright">
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmla.png" alt="Логотип htmlacademy" width="115" height="41">
+          <div><img class="htmla-logo" src="img/logo-htmla.png" alt="Логотип htmlacademy" width="115" height="41"></div>
         </a>
       </div>
     </footer>
   </body>
 </html>
+
