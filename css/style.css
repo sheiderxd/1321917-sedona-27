@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  background-image: url("../img/index-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  …
+}
+
+/* Header */
+
+.main-header {
+  background-image: url("../img/polygon.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.site-navigation {
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.site-navigation a {
+  font-size: 14px;
+  line-height: 26px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Main */
+
+.container {
+  background-color: #ffffff;
+}
+
+.page-title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.features-list,
+.town-features-list {
+  list-style: none;
+}
+
+.features h2 {
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.features h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.feature-item:nth-child(1),
+.feature-item:nth-child(2) {
+  background-color: #81b3d2;
+  color: #ffffff;
+  line-height: 21px;
+}
+
+.feature-item:nth-child(3),
+.feature-item:nth-child(4),
+.feature-item:nth-child(5) {
+  background-color: #eeeeee;
+}
+
+.town-features-list {
+  color: black;
+
+  background-color: #ffffff;
+}
+
+.town-feature-item:nth-child(1)::before {
+  content: url("../img/icon-1.png");
+}
+
+.town-feature-item:nth-child(2)::before {
+  content: url("../img/icon-2.png");
+}
+
+.town-feature-item:nth-child(3)::before {
+  content: url("../img/icon-3.png");
+}
+
+.hotel-search-form {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.hotel-search-form input {
+  background-color: #f2f2f2;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotel-search-form input:hover {
+  background-color: #ebebeb;
+}
+
+.hotel-search-form input:focus {
+  background-color: #ffffff;
+}
+
+.hotel-search p:nth-of-type(1) {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.popup-button {
+  background-color: #766357;
+
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.popup-button:hover,
+.popup-button:focus {
+  background-color: #604e43;
+}
+
+.popup-button:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.calendar-button::before {
+  background-color: #f2f2f2;
+
+  content: url("../img/calendar.png");
+}
+
+.calendar-button:hover::before,
+.calendar-button:focus::before {
+  content: url("../img/calendar-focus.png");
+}
+
+.calendar-button:active::before {
+  content: url("../img/calendar-active.png")
+}
+
+.submit-button {
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.submit-button:focus,
+.submit-button:hover {
+  background-color: #669ec0;
+}
+
+.submit-button:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+
+.contacts,
+.contacts a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.social-links-list {
+  list-style: none;
+}
+
+.social-links-list li {
+  display: inline-block;
+  background-color: #81b3d2;
+}
+
+.social-links-list li:focus,
+.social-links-list li:hover {
+  background-color: #669ec0;
+}
+
+.social-links-list li:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social-links-list li:active::before {
+  opacity: 30%;
+}
+
+.social-links-list li:nth-child(1)::before {
+  content: url("../img/tw.png");
+}
+
+.social-links-list li:nth-child(2)::before {
+  content: url("../img/fb.png");
+}
+
+.social-links-list li:nth-child(3)::before {
+  content: url("../img/youtube.png");
+}
+
+.copyright {
+  line-height: 26px;
+}
+
+.copyright div:hover {
+  display: none;
+
+}
+
+
+.copyright div:hover::before {
+ background-image: url("../img/htmla-focus.png");
+ background-size: contain;
+}
