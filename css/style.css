@@ -13,7 +13,7 @@ body {
 .main-page {
   background-color: #ffffff;
   background-image: url("../img/index-background.jpg");
-  background-position: 0 0;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -36,17 +36,15 @@ body {
 
 .polygon-background {
   content: url("../img/intro-mask.svg");
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 
 .site-navigation {
   background-color: #ffffff;
-}
 
-.main-navigation ul {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation a {
@@ -436,4 +434,46 @@ body {
 
 .copyright {
   line-height: 26px;
+}
+
+
+/* Сетка */
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стека header */
+
+.main-header {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-navigation {
+  display: flex;
+
+  margin-bottom: 76px;
+
+  /* временно для сетки */
+  min-height: 56px;
+}
+
+.main-logo {
+  width: 459px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 79px;
+}
+
+/* сетка main */
+
+.page-title {
+  width: 450px;
+  margin: 0 auto;
+
+  padding-top: 60px;
 }
