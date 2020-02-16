@@ -7,14 +7,17 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #333333;
+  background-color: #f2f2f2;
   text-transform: uppercase;
 }
 
-.main-page {
-  background-color: #ffffff;
+.main-page .main-header {
+  background-color: #f2f2f2;
   background-image: url("../img/index-background.jpg");
   background-position: top center;
+  top: 0px;
   background-repeat: no-repeat;
+  background-position: 0px -30px;
 }
 
 .inner-page {
@@ -35,7 +38,10 @@ body {
 /* Header */
 
 .polygon-background {
-  content: url("../img/intro-mask.svg");
+  background-image: url("../img/intro-mask.svg");
+  height: 57px;
+  width: 1200px;
+  background-size: cover;
 }
 
 .site-navigation {
@@ -80,6 +86,10 @@ body {
   line-height: 26px;
   font-weight: 700;
   text-align: center;
+}
+
+.features h2 {
+  padding-bottom: 54px;
 }
 
 .features-list,
@@ -163,12 +173,25 @@ body {
   font-weight: 700;
 }
 
+.button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .popup-button {
   background-color: #766357;
-
+  border: none;
+  text-transform: uppercase;
   font-size: 21px;
   line-height: 26px;
   color: #ffffff;
+  font-weight: 700;
+
+  width: 568px;
+  height: 86px;
 }
 
 .popup-button:hover,
@@ -189,8 +212,14 @@ body {
 
 .submit-button {
   font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
   line-height: 26px;
   color: #ffffff;
+  border: none;
+
+  width: 458px;
+  height: 58px;
 
   background-color: #81b3d2;
 }
@@ -407,10 +436,6 @@ body {
   list-style: none;
 }
 
-.social-links-list a {
-  background-color: #81b3d2;
-}
-
 .social-links-item a:focus,
 .social-links-list a:hover {
   background-color: #669ec0;
@@ -420,16 +445,33 @@ body {
   background-color: #5496bd;
 }
 
-.social-links-item:nth-child(1) a {
-  content: url("../img/twitter.svg");
+.social-links-item:nth-child(1) div {
+  background-color: #81b3d2;
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
 }
 
-.social-links-item:nth-child(2) a {
-  content: url("../img/fb-icon.svg");
+.social-links-item:nth-child(2) div {
+  background-color: #81b3d2;
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
 }
 
-.social-links-item:nth-child(3) a {
-  content: url("../img/youtube.svg");
+.social-links-item:nth-child(3) div {
+  background-color: #81b3d2;
+  background-image: url("../img/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 48px;
 }
 
 .copyright {
@@ -457,16 +499,33 @@ body {
   display: flex;
 
   margin-bottom: 76px;
+}
 
-  /* временно для сетки */
-  min-height: 56px;
+.navigation-item:nth-of-type(2) {
+  margin-right: auto;
+}
+
+.navigation-item {
+  width: 239px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header-logo {
+  width: 140px;
+  position: absolute;
+  top: 0px;
+  margin-left: 530px;
+  margin-right: 530px;
 }
 
 .main-logo {
   width: 459px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 79px;
+  margin-bottom: 22px;
 }
 
 /* сетка main */
@@ -475,5 +534,231 @@ body {
   width: 450px;
   margin: 0 auto;
 
+
   padding-top: 60px;
+  margin-bottom: 35px;
+}
+
+.features {
+  margin: 0;
+  padding: 0;
+}
+
+.features h2 {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.feature-item:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 586px;
+  width: 1200px;
+}
+
+.feature-item:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-content: flex-start;
+  height: 256px;
+  width: 1200px;
+}
+
+.feature-item:nth-child(3),
+.feature-item:nth-child(4),
+.feature-item:nth-child(5) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  height: 256px;
+}
+
+.feature-description h3 {
+  width: 155px;
+  margin-top: 45px;
+  margin-bottom: 14px;
+}
+
+.feature-description p {
+  width: 305px;
+}
+
+.feature-description {
+  width: 400px;
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.town-features-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.town-feature-item {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 330px;
+  width: 400px;
+}
+
+.town-feature-item p {
+  width: 285px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.town-feature-item h3 {
+  margin-bottom: 0;
+}
+
+.hotel-search {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  text-align: center;
+}
+
+.hotel-search p {
+  width: 435px;
+}
+
+.hotel-search p:nth-of-type(1) {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.hotel-search p:nth-of-type(2) {
+  margin-bottom: 55px;
+}
+
+.hotel-search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 568px;
+  height: 395px;
+
+  padding-top: 55px;
+
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  display: flex;
+  height: 38px;
+  width: 458px;
+  align-items: center;
+
+  margin-bottom: 29px;
+}
+
+.form-wrapper input {
+  width: 310px;
+  height: 38px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  padding: 13px;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.form-wrapper:nth-of-type(3) input {
+  width: 38px;
+  margin: 0;
+}
+
+.form-wrapper:nth-of-type(3) {
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+
+.child-wrapper {
+  display: flex;
+  align-items: center;
+  width: 179px;
+  height: 38px;
+}
+
+.adults-wrapper {
+  align-items: center;
+  display: flex;
+  width: 224px;
+  height: 38px;
+
+}
+
+.adults-wrapper label,
+.child-wrapper label {
+  margin-right: auto;
+}
+
+/* сетка footer */
+
+.main-footer {
+  display: flex;
+  align-content: center;
+}
+
+.contacts {
+  margin-left: 132px;
+  margin-right: 169px;
+}
+
+.contacts p:nth-of-type(1) {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.contacts p:nth-of-type(2) {
+  margin-top: 10px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  margin-right: 228px;
+}
+
+.social-links-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  width: 197px;
+  justify-content: space-between;
 }
