@@ -11,45 +11,53 @@
     <header class="main-header">
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li class="current-page">Гостиницы</li>
+          <li class="navigation-item"><a href="#">Информация</a></li>
+          <li class="navigation-item"><a href="#">Фото и видео</a></li>
+          <li class="navigation-item"><a href="#">Карта штата</a></li>
+          <li class="navigation-item current-page">Гостиницы</li>
         </ul>
-        <a href="index.html">
+        <a class="main-header-logo" href="index.html">
           <img src="img/logo-sedona.svg" alt="Логотип Шапки Сайта" width="140" height="71">
         </a>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Бронирование Гостинниц</h1>
 
-      <section>
+      <section class="filters">
         <h2 class="visually-hidden">Фильтр гостинниц</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get" oninput="pricemin.value=rangemin.value, pricemax.value=rangemax.value">
-          <fieldset class="checkbox">
+          <fieldset class="checkbox infrastructure">
             <legend>Инфраструктура:</legend>
-            <input type="checkbox" name="pool" id="pool-filed" class="visually-hidden">
-            <label for="pool-filed">Бассейн</label>
-
-            <input type="checkbox" name="parking" id="parking-filed" class="visually-hidden">
-            <label for="parking-filed">Пароковка</label>
-
-            <input type="checkbox" name="wifi" id="wifi-filed" class="visually-hidden">
-            <label for="wifi-filed">Wi-Fi</label>
+            <div class="checkbox-item">
+              <input type="checkbox" name="pool" id="pool-filed" class="visually-hidden">
+              <label for="pool-filed">Бассейн</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="parking" id="parking-filed" class="visually-hidden">
+              <label for="parking-filed">Пароковка</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="wifi" id="wifi-filed" class="visually-hidden">
+              <label for="wifi-filed">Wi-Fi</label>
+            </div>
           </fieldset>
 
-          <fieldset class="checkbox">
+          <fieldset class="checkbox house-type">
             <legend>Тип жилья:</legend>
-            <input type="checkbox" name="hotel" id="hotel-filed" class="visually-hidden">
-            <label for="hotel-filed">Гостиница</label>
-
-            <input type="checkbox" name="motel" id="motel-filed" class="visually-hidden">
-            <label for="motel-filed">Мотель</label>
-
-            <input type="checkbox" name="apartments" id="apartments-filed" class="visually-hidden">
-            <label for="apartments-filed">Апартаменты</label>
+            <div class="checkbox-item">
+              <input type="checkbox" name="hotel" id="hotel-filed" class="visually-hidden">
+              <label for="hotel-filed">Гостиница</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="motel" id="motel-filed" class="visually-hidden">
+              <label for="motel-filed">Мотель</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="apartments" id="apartments-filed" class="visually-hidden">
+              <label for="apartments-filed">Апартаменты</label>
+            </div>
           </fieldset>
 
           <fieldset class="range">
@@ -69,74 +77,103 @@
       <section class="result">
         <h2 class="visually-hidden">Результат поиска</h2>
         <form class="sorting">
-          <p>Найдено: 3</p>
-          <h3>сортировка:</h3>
-          <input type="radio" id="radio-price" class="sort-button visually-hidden" name="sorting" checked>
-          <label for="radio-price" class="sorting-label">По цене</label>
+          <div class="sorting-item">
+            <h3>Найдено: 3</h3>
+          </div>
+          <div class="sorting-item">
+            <p>сортировка:</p>
+            <input type="radio" id="radio-price" class="sort-button visually-hidden" name="sorting" checked>
+            <label for="radio-price" class="sorting-label">По цене</label>
 
-          <input type="radio" id="radio-type" class="sort-button visually-hidden" name="sorting">
-          <label for="radio-type" class="sorting-label">По типу</label>
+            <input type="radio" id="radio-type" class="sort-button visually-hidden" name="sorting">
+            <label for="radio-type" class="sorting-label">По типу</label>
 
-          <input type="radio" id="radio-rate" class="sort-button visually-hidden" name="sorting">
-          <label for="radio-rate" class="sorting-label">По рейтингу</label>
+            <input type="radio" id="radio-rate" class="sort-button visually-hidden" name="sorting">
+            <label for="radio-rate" class="sorting-label">По рейтингу</label>
+          </div>
 
-          <input type="radio" name="sort-button" id="sort-up-radio" class="radio-up visually-hidden" aria-label="По возростанию" checked>
-          <label for="sort-up-radio" class="sort-up"></label>
+          <div class="sorting-item">
+            <input type="radio" name="sort-button" id="sort-up-radio" class="radio-up visually-hidden" aria-label="По возростанию" checked>
+            <label for="sort-up-radio" class="sort-up"></label>
 
-          <input type="radio" name="sort-button" id="sort-down-radio" class="radio-down visually-hidden" aria-label="По убыванию">
-          <label for="sort-down-radio" class="sort-down"></label>
+            <input type="radio" name="sort-button" id="sort-down-radio" class="radio-down visually-hidden" aria-label="По убыванию">
+            <label for="sort-down-radio" class="sort-down"></label>
+          </div>
         </form>
         <ol class="result-list">
           <li class="result-item">
-            <h3 class="result-item-title"><a href="#">Amara Resort & Spa</a></h3>
-            <p>Гостиница</p>
-            <p>От 4000 Р.</p>
-            <img src="img/hotel1.jpg" alt="Фото Гостинницы Amara Resort & Spa" width="135" height="90">
-            <a href="#" class="button-more">Подробнее</a>
-            <a href="#" class="button-reserve">Забронировать</a>
+            <div class="result-wrapper">
+              <h3 class="result-item-title"><a href="#">Amara Resort & Spa</a></h3>
+              <div class="result-item-info">
+                <p>Гостиница</p>
+                <p>От 4000 Р.</p>
+              </div>
+              <div class="buttons">
+                <a href="#" class="button-more">Подробнее</a>
+                <a href="#" class="button-reserve">Забронировать</a>
+              </div>
+            </div>
+            <img class="result-item-photo" src="img/hotel1.jpg" alt="Фото Гостинницы Amara Resort & Spa" width="135" height="90">
             <div class="rating">
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
+              <div>
+                <div class="rating-stars"></div>
+                <div class="rating-stars"></div>
+                <div class="rating-stars"></div>
+                <div class="rating-stars"></div>
+              </div>
               <p><span>Рейтинг: 8,5</span></p>
             </div>
           </li>
           <li class="result-item">
-            <h3 class="result-item-title"><a href="#">Desert Quail Inn</a></h3>
-            <p>Мотель</p>
-            <p>От 3000 Р.</p>
-            <img src="img/hotel2.jpg" alt="Фото Мотеля Desert Quail Inn" width="135" height="90">
-            <a href="#" class="button-more">Подробнее</a>
-            <a href="#" class="button-reserve">Забронировать</a>
-            <div class="rating">
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <p><span>Рейтинг: 8,9</span></p>
+            <div class="result-wrapper">
+              <h3 class="result-item-title"><a href="#">Desert Quail Inn</a></h3>
+              <div class="result-item-info">
+                <p>Мотель</p>
+                <p>От 3000 Р.</p>
+              </div>
+              <div class="buttons">
+                <a href="#" class="button-more">Подробнее</a>
+                <a href="#" class="button-reserve">Забронировать</a>
+              </div>
             </div>
+              <img class="result-item-photo" src="img/hotel2.jpg" alt="Фото Мотеля Desert Quail Inn" width="135" height="90">
+              <div class="rating">
+                <div>
+                  <div class="rating-stars"></div>
+                  <div class="rating-stars"></div>
+                  <div class="rating-stars"></div>
+                </div>
+                <p><span>Рейтинг: 8,9</span></p>
+              </div>
           </li>
           <li class="result-item">
-            <h3 class="result-item-title"><a href="#">Villas at Poco Diablo</a></h3>
-            <p>Апартаменты</p>
-            <p>От 2000 Р.</p>
-            <img src="img/hotel3.jpg" alt="Фото Апартаментов Villas at Poco Diablo" width="135" height="90">
-            <a href="#" class="button-more">Подробнее</a>
-            <a href="#" class="button-reserve">Забронировать</a>
-            <div class="rating">
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <div class="rating-stars"></div>
-              <p><span>Рейтинг: 9,2</span></p>
+            <div class="result-wrapper">
+              <h3 class="result-item-title"><a href="#">Villas at Poco Diablo</a></h3>
+              <div class="result-item-info">
+                <p>Апартаменты</p>
+                <p>От 2000 Р.</p>
+              </div>
+              <div class="buttons">
+                <a href="#" class="button-more">Подробнее</a>
+                <a href="#" class="button-reserve">Забронировать</a>
+              </div>
             </div>
+              <img class="result-item-photo" src="img/hotel3.jpg" alt="Фото Апартаментов Villas at Poco Diablo" width="135" height="90">
+              <div class="rating">
+                <div>
+                  <div class="rating-stars"></div>
+                  <div class="rating-stars"></div>
+                  <div class="rating-stars"></div>
+                </div>
+                <p><span>Рейтинг: 9,2</span></p>
+              </div>
           </li>
         </ol>
       </section>
     </main>
 
 
-    <footer>
+    <footer class="main-footer container">
       <div class="contacts">
         <p>#visitSEDONA</p>
         <p>Тел: <a href="tel:+7(495)666-02-66">+7(495) 666-02-66</a></p>
@@ -144,9 +181,9 @@
 
       <div class="social-links">
         <ul class="social-links-list">
-          <li class="social-links-item"><a href="#" aria-label="Twitter"></a></li>
-          <li class="social-links-item"><a href="#" aria-label="Facebook"></a></li>
-          <li class="social-links-item"><a href="#" aria-label="Youtube"></a></li>
+          <li class="social-links-item"><a href="#" aria-label="Twitter"><div></div></a></li>
+          <li class="social-links-item"><a href="#" aria-label="Facebook"><div></div></a></li>
+          <li class="social-links-item"><a href="#" aria-label="Youtube"><div></div></a></li>
         </ul>
       </div>
 
