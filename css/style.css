@@ -262,6 +262,9 @@ body {
 }
 
 .hotel-search-form {
+  position: absolute;
+  bottom: 198px;
+
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -787,11 +790,11 @@ body {
 }
 
 .hotel-search {
+  position: relative;
   padding-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   text-align: center;
 }
@@ -873,14 +876,18 @@ body {
 /* сетка footer */
 
 .main-footer {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
 
   width: 1200px;
   min-height: 120px;
   box-sizing: border-box;
+  transform: translateY(-120px);
 
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 130px;
