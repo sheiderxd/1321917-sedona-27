@@ -599,7 +599,8 @@ body {
   cursor: pointer;
 }
 
-.range-toggle:hover {
+.range-toggle:hover,
+.range-toggle:focus {
   background: #1c4f80;
 }
 
@@ -650,6 +651,10 @@ body {
 .sorting label:active {
   color: #000000;
   border: none;
+}
+
+.sorting-label:hover {
+  color: #81b3d2;
 }
 
 .sort-button:checked + label {
