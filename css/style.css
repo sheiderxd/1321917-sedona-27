@@ -351,19 +351,53 @@ body {
 
 .button-minus,
 .button-plus {
-  font-weight: 700;
-  font-size: 18px;
-  color: #666666;
+  position: relative;
 }
 
-.button-minus:hover,
-.button-plus:hover {
-  color: black;
+.button-minus::before,
+.button-plus::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
-.button-minus:active,
-.button-plus:active {
-  color: #81b3d2;
+.button-plus::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+
+  transform: rotate(90deg);
+
+  background-color: #a9a9a9;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+.button-minus:hover::before,
+.button-plus:hover::before,
+.button-plus:hover::after {
+  background-color: black;
+}
+
+.button-minus:active::before,
+.button-plus:active::before,
+.button-plus:active::after {
+  background-color: #81b3d2;
 }
 
 .submit-button {
@@ -506,11 +540,30 @@ body {
 }
 
 .sort-up {
-  content: url("../img/icon-up-dir.svg")
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #cacaca;
 }
 
-.sort-down{
-  content: url("../img/icon-down-dir.svg");
+.sort-down {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #cacaca;
+  transform: rotate(180deg);
+}
+
+.sort-up:hover,
+.sort-down:hover {
+  border-bottom-color: black;
+}
+
+.sort-up:hover,
+.sort-down:hover {
+  border-bottom-color: #81b3d2;
 }
 
 .result {
