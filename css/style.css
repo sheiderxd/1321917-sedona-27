@@ -213,7 +213,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding: 0px 70px;
 
   flex-direction: column;
   display: flex;
@@ -222,7 +221,10 @@ body {
 .result-item {
   display: flex;
   align-items: center;
-  padding: 30px 0px;
+  padding: 30px 70px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: -1px;
 }
 
 .result-item-photo {
@@ -257,7 +259,7 @@ body {
 }
 
 .rating {
-  width: 110px;
+  width: 120px;
   height: 90px;
 
   flex-wrap: wrap;
@@ -311,6 +313,7 @@ body {
 }
 
 .popup-button {
+  cursor: pointer;
   background-color: #766357;
   border: none;
   text-transform: uppercase;
@@ -334,6 +337,7 @@ body {
 }
 
 .calendar-button {
+  cursor: pointer;
   background-color: #f2f2f2;
 }
 
@@ -341,7 +345,8 @@ body {
   fill: #cacaca;
 }
 
-.calendar-button:hover path {
+.calendar-button:hover path,
+.calendar-button:focus path {
   fill: #231f20;
 }
 
@@ -351,6 +356,7 @@ body {
 
 .button-minus,
 .button-plus {
+  cursor: pointer;
   position: relative;
 }
 
@@ -390,7 +396,11 @@ body {
 
 .button-minus:hover::before,
 .button-plus:hover::before,
-.button-plus:hover::after {
+.button-plus:hover::after,
+.button-minus:focus::before,
+.button-plus:focus::before,
+.button-plus:focus::after
+ {
   background-color: black;
 }
 
@@ -401,6 +411,7 @@ body {
 }
 
 .submit-button {
+  cursor: pointer;
   font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
@@ -440,21 +451,31 @@ body {
   line-height: 21px;
 }
 
-.filter-form legend {
+.filter-form legend,
+.range-title {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
 
+  margin-top: 0;
   margin-bottom: 25px;
 }
 
 .filter-button {
+  cursor: pointer;
+  display: block;
+  width: 133px;
+  height: 32px;
   background-color: transparent;
-  outline: solid 2px #ffffff;
-  border: none;
+  border: solid 2px #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 2px 30px;
+  margin: 0 auto;
   color: #ffffff;
 
   font-size: 14px;
+  text-transform: uppercase;
   line-height: 21px;
 }
 
@@ -473,6 +494,7 @@ body {
 }
 
 .checkbox-item label {
+  cursor: pointer;
   position: relative;
   padding-left: 40px;
 }
@@ -484,23 +506,125 @@ body {
   content: url("../img/checkbox-off.svg");
 }
 
-.checkbox input[type="checkbox"]:checked + label::before {
+.checkbox input[type="checkbox"]:checked + label::before,
+.checkbox input[type="checkbox"]:focus + label::before {
   top: -2px;
   left: 0;
   position: absolute;
   content: url("../img/checkbox-on.svg");
 }
 
-.output-min {
-  border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
+.price-controls {
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
-.output-max {
-  border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 /* inner-page/result */
@@ -512,6 +636,7 @@ body {
 }
 
 .sorting-label {
+  cursor: pointer;
   font-size: 12px;
   line-height: 18px;
 
@@ -520,9 +645,7 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sorting label:hover {
-  color: #81b3d2;
-}
+
 
 .sorting label:active {
   color: #000000;
@@ -534,12 +657,13 @@ body {
   border: none;
 }
 
-.sort-button {
-  background-color: transparent;
-  border: none;
-}
 
-.sort-up {
+.sorting-up-icon::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  margin-top: -3px;
+  margin-left: -5px;
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
@@ -547,8 +671,12 @@ body {
   border-bottom: 12px solid #cacaca;
 }
 
-.sort-down {
-  width: 0;
+.sorting-down-icon::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  margin-top: -3px;
+  margin-left: -12px;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -556,13 +684,14 @@ body {
   transform: rotate(180deg);
 }
 
-.sort-up:hover,
-.sort-down:hover {
+.sorting-down-icon:hover::before,
+.sorting-up-icon:hover::before {
   border-bottom-color: black;
 }
 
-.sort-up:hover,
-.sort-down:hover {
+.sorting-up-icon:active::before,
+.sorting-down-icon:active::before,
+.sort-btn:checked + label::before {
   border-bottom-color: #81b3d2;
 }
 
@@ -599,10 +728,12 @@ body {
 }
 
 .button-more {
+  padding: 2px 15px;
   line-height: 21px;
   color: #ffffff;
   font-weight: 700;
   background-color: #81b3d2;
+  margin-right: 2px;
 }
 
 .button-more:hover,
@@ -618,6 +749,7 @@ body {
 }
 
 .button-reserve {
+  padding: 2px 13px;
   line-height: 21px;
   color: #ffffff;
   font-weight: 700;
@@ -637,6 +769,7 @@ body {
 }
 
 .rating span {
+  padding: 2px 15px;
   background-color: #f2f2f2;
   color: #666666;
 
@@ -1062,7 +1195,8 @@ body {
   height: 41px;
 }
 
-.htmla-logo:hover path {
+.htmla-logo:hover path,
+.htmla-logo:focus path {
   fill: #81b3d2;
 }
 
