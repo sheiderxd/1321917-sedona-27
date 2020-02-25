@@ -40,12 +40,17 @@ body {
 }
 
 /* Header */
+.main-navigation {
+  position: relative;
+}
 
-.polygon-background {
-  background-image: url("../img/intro-mask.svg");
+.main-page .main-navigation::after {
+  content: url("../img/intro-mask.svg");
+  position: absolute;
+  left: 0;
+  bottom: 0px;
   height: 57px;
   width: 1200px;
-  background-size: cover;
 }
 
 .site-navigation {
@@ -923,7 +928,7 @@ body {
   width: 459px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 22px;
+  padding-bottom: 80px;
 }
 
 /* сетка main */

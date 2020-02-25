@@ -22,7 +22,6 @@
           </a>
         </nav>
       </header>
-
       <main class="container">
         <h1 class="visually-hidden">Бронирование Гостинниц</h1>
 
@@ -71,12 +70,11 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="range-toggle range-toggle-min" tabindex="0"></div>
+                <div class="range-toggle range-toggle-min" tabindex="0" arial></div>
                 <div class="range-toggle range-toggle-max" tabindex="0"></div>
               </div>
-            <button class="filter-button" type="submit">Показать</button>
+              <button class="filter-button" type="submit">Показать</button>
             </div>
-
           </form>
         </section>
 
@@ -100,13 +98,14 @@
             </div>
 
             <div class="sorting-item">
-              <input type="radio" id="sorting-up" class="sort-btn visually-hidden" name="sorting-direction" aria-label="По возростанию" checked>
-              <label for="sorting-up" class="sorting-up-icon sorting-icon"></label>
+              <input type="radio" id="sorting-up" class="sort-btn visually-hidden" name="sorting-direction" checked>
+              <label for="sorting-up" class="sorting-up-icon sorting-icon"><span class="visually-hidden">По возростанию</span></label>
 
-              <input type="radio" id="sorting-down" class="sort-btn visually-hidden" name="sorting-direction" aria-label="По убыванию">
-              <label for="sorting-down" class="sorting-down-icon"></label>
+              <input type="radio" id="sorting-down" class="sort-btn visually-hidden" name="sorting-direction">
+              <label for="sorting-down" class="sorting-down-icon"><span class="visually-hidden">По убыванию</span></label>
             </div>
           </form>
+
           <ol class="result-list">
             <li class="result-item">
               <div class="result-wrapper">
@@ -131,6 +130,7 @@
                 <p><span>Рейтинг: 8,5</span></p>
               </div>
             </li>
+
             <li class="result-item">
               <div class="result-wrapper">
                 <h3 class="result-item-title"><a href="#">Desert Quail Inn</a></h3>
@@ -153,6 +153,7 @@
                   <p><span>Рейтинг: 8,9</span></p>
                 </div>
             </li>
+
             <li class="result-item">
               <div class="result-wrapper">
                 <h3 class="result-item-title"><a href="#">Villas at Poco Diablo</a></h3>
@@ -179,7 +180,6 @@
         </section>
       </main>
 
-
       <footer class="main-footer container">
         <div class="contacts">
           <p>#visitSEDONA</p>
@@ -188,9 +188,9 @@
 
         <div class="social-links">
           <ul class="social-links-list">
-            <li class="social-links-item"><a href="#" aria-label="Twitter"></a></li>
-            <li class="social-links-item"><a href="#" aria-label="Facebook"></a></li>
-            <li class="social-links-item"><a href="#" aria-label="Youtube"></a></li>
+            <li class="social-links-item"><a href="#" aria-label="Twitter"><span class="visually-hidden">Twitter</span></a></li>
+            <li class="social-links-item"><a href="#" aria-label="Facebook"><span class="visually-hidden">Facebook</span></a></li>
+            <li class="social-links-item"><a href="#" aria-label="Youtube"><span class="visually-hidden">Youtube</span></a></li>
           </ul>
         </div>
 
