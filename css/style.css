@@ -133,6 +133,7 @@ body {
 }
 
 .town-features-list {
+  width: 100%;
   color: black;
 
   background-color: #ffffff;
@@ -444,6 +445,7 @@ body {
   border: none;
 
   margin-top: 24px;
+  margin-bottom: 55px;
 
   width: 458px;
   height: 58px;
@@ -579,6 +581,10 @@ body {
   cursor: pointer;
   width: 90px;
   padding-left: 65px;
+}
+
+.price-controls label:last-child {
+  padding-left: 60px;
 }
 
 .price-controls input {
@@ -909,6 +915,7 @@ body {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
 
   margin-bottom: 76px;
 }
@@ -927,14 +934,23 @@ body {
   text-align: right;
 }
 
-.navigation-item:nth-of-type(2) {
-  margin-right: auto;
+.navigation-item:nth-of-type(2),
+.navigation-item:nth-of-type(6) {
+  margin-right: 244px;
+}
+
+.navigation-item a {
+  max-width: 190px;
 }
 
 .navigation-item {
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 239px;
-  height: 56px;
+  min-height: 56px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -975,19 +991,15 @@ body {
   margin: 0 auto;
 }
 
-.feature-item:nth-child(1) {
+.feature-item-wide {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   width: 1200px;
 }
 
-.feature-item:nth-child(2) {
-  display: flex;
-  flex-wrap: wrap;
+.feature-reverse {
   flex-direction: row-reverse;
-  align-content: flex-start;
-  width: 1200px;
 }
 
 .feature-item:nth-child(3),
@@ -997,7 +1009,7 @@ body {
   flex-direction: column;
   text-align: center;
   width: 400px;
-  height: 256px;
+  min-height: 256px;
 }
 
 .feature-description h3 {
@@ -1023,7 +1035,7 @@ body {
 .feature-description {
   padding: 46px 45px;
   width: 400px;
-  height: 256px;
+  min-height: 256px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1037,6 +1049,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 
+  background-color: #eeeeee;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1060,7 +1073,7 @@ body {
   align-items: center;
 
   box-sizing: border-box;
-  height: 330px;
+  min-height: 330px;
   width: 400px;
 }
 
@@ -1073,6 +1086,7 @@ body {
 .town-feature-item h3 {
   margin-top: 25px;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .hotel-search {
@@ -1095,7 +1109,7 @@ body {
 }
 
 .hotel-search p:nth-of-type(2) {
-  margin-bottom: 50px;
+  margin-bottom: 47px;
   width: 450px;
 }
 
@@ -1104,7 +1118,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 568px;
-  height: 395px;
 
   padding-top: 55px;
 
@@ -1130,6 +1143,12 @@ body {
   margin-left: auto;
   box-sizing: border-box;
   text-transform: uppercase;
+}
+
+.adults-wrapper input,
+.child-wrapper input {
+  padding: 2px;
+  text-align: center;
 }
 
 .double-wrapper input {
