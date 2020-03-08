@@ -97,7 +97,7 @@ body {
   text-align: center;
 }
 
-.features h2 {
+.features h2:last-of-type {
   padding-bottom: 54px;
 }
 
@@ -117,13 +117,6 @@ body {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-}
-
-.feature-item:nth-child(1),
-.feature-item:nth-child(2) {
-  background-color: #81b3d2;
-  color: #ffffff;
-  line-height: 21px;
 }
 
 .feature-item:nth-child(3),
@@ -159,6 +152,7 @@ body {
   margin: 0;
   padding: 0;
   padding: 27px 72px;
+  padding-bottom: 0;
   min-height: 217px;
   box-sizing: border-box;
   display: flex;
@@ -180,6 +174,10 @@ body {
   margin-right: 110px;
 }
 
+.checkbox:last-of-type {
+  margin-right: 0;
+}
+
 .result {
   display: flex;
   flex-direction: column;
@@ -187,9 +185,10 @@ body {
 
 .sorting {
   display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
   align-items: baseline;
-  height: 86px;
+  min-height: 86px;
   width: 1200px;
   padding: 30px 72px;
 }
@@ -205,16 +204,16 @@ body {
   font-weight: 700;
 }
 
-.sorting-item:nth-of-type(1) {
-  width: 164px;
+.sorting-item {
+  margin-right: 49px;
 }
 
-.sorting-item:nth-of-type(2) {
-  width: 500px;
-  margin-right: auto;
+.sorting-item:last-of-type {
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.sorting-item:nth-of-type(2) label {
+.sorting-item label {
   margin-right: 32px;
 }
 
@@ -257,8 +256,10 @@ body {
   margin: 0;
 }
 
-.result-item p {
+.result-wrapper p {
   margin-bottom: 8px;
+  margin-right: 6px;
+  width: 110px;
 }
 
 .result-item-info {
@@ -266,8 +267,7 @@ body {
 }
 
 .result-item-info .result-price {
-  margin-right: 78px;
-  margin-left: auto;
+  width: 142px;
 }
 
 .result-wrapper {
@@ -276,7 +276,8 @@ body {
   justify-content: space-between;
 
   margin-right: auto;
-  height: 90px;
+  min-height: 90px;
+  width: 300px;
 }
 
 .rating p {
@@ -294,9 +295,16 @@ body {
   align-items: flex-end;
 }
 
+.main-form-wrapper {
+  overflow: auto;
+  width: 568px;
+  padding: 0 55px;
+  box-sizing: border-box;
+}
+
 .hotel-search-form {
   position: absolute;
-  bottom: 198px;
+  bottom: 205px;
 
   font-size: 14px;
   line-height: 26px;
@@ -447,8 +455,9 @@ body {
   margin-top: 24px;
   margin-bottom: 55px;
 
+  padding: 10px;
   width: 458px;
-  height: 58px;
+  min-height: 58px;
 
   background-color: #81b3d2;
 }
@@ -467,8 +476,14 @@ body {
 
 /* inner-page/Filer */
 
+.range {
+  margin-bottom: 27px;
+  min-height: 163px;
+}
+
 .filter-form fieldset {
-  border: 0 none;
+  border: none;
+  margin-bottom: 27px;
 }
 
 .filter-form {
@@ -524,6 +539,7 @@ body {
 }
 
 .checkbox-item label {
+  display: block;
   cursor: pointer;
   position: relative;
   padding-left: 40px;
@@ -925,12 +941,16 @@ body {
 }
 
 .navigation-item:nth-of-type(1) a,
-.navigation-item:nth-of-type(2) a {
+.navigation-item:nth-of-type(2) a,
+.navigation-item:nth-of-type(5) a,
+.navigation-item:nth-of-type(6) a {
   text-align: left;
 }
 
 .navigation-item:nth-of-type(3) a,
-.navigation-item:nth-of-type(4) a {
+.navigation-item:nth-of-type(4) a,
+.navigation-item:nth-of-type(7) a,
+.navigation-item:nth-of-type(8) a {
   text-align: right;
 }
 
@@ -945,8 +965,7 @@ body {
 
 .navigation-item {
   box-sizing: border-box;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
   width: 239px;
   min-height: 56px;
   display: flex;
@@ -987,6 +1006,7 @@ body {
 }
 
 .features h2 {
+  text-align: center;
   width: 500px;
   margin: 0 auto;
 }
@@ -996,6 +1016,9 @@ body {
   flex-wrap: wrap;
   align-content: flex-start;
   width: 1200px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  line-height: 21px;
 }
 
 .feature-reverse {
@@ -1042,6 +1065,11 @@ body {
   justify-content: flex-start;
   text-align: center;
   box-sizing: border-box;
+}
+
+.feature-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .features-list {
@@ -1100,15 +1128,16 @@ body {
 }
 
 .hotel-search p {
-  width: 435px;
+  width: 450px;
 }
 
 .hotel-search p:nth-of-type(1) {
   margin-top: 25px;
   margin-bottom: 10px;
+  width: 435px;
 }
 
-.hotel-search p:nth-of-type(2) {
+.hotel-search p:last-of-type {
   margin-bottom: 47px;
   width: 450px;
 }
@@ -1118,10 +1147,15 @@ body {
   flex-direction: column;
   align-items: center;
   width: 568px;
+  height: 395px;
 
   padding-top: 55px;
 
   box-sizing: border-box;
+}
+
+.hotel-search-form label {
+  max-width: 95px;
 }
 
 .form-wrapper {
@@ -1246,6 +1280,7 @@ body {
 }
 
 .copyright p {
+  width: 75px;
   margin-right: 7px;
 }
 
