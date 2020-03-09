@@ -552,8 +552,7 @@ body {
   content: url("../img/checkbox-off.svg");
 }
 
-.checkbox input[type="checkbox"]:checked + label::before,
-.checkbox input[type="checkbox"]:focus + label::before {
+.checkbox input[type="checkbox"]:checked + label::before {
   top: -2px;
   left: 0;
   position: absolute;
