@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -82,6 +82,13 @@ body {
 .current-page {
   color: #766357;
   font-weight: 700;
+}
+
+.current-page a,
+.current-page a:focus,
+.current-page a:hover {
+  color: inherit;
+  cursor: inherit;
 }
 
 /* Main-page */
@@ -305,6 +312,8 @@ body {
 .hotel-search-form {
   position: absolute;
   bottom: 205px;
+  left: 50%;
+  transform: translateX(-50%);
 
   font-size: 14px;
   line-height: 26px;
@@ -317,6 +326,7 @@ body {
 
 .hotel-search-form input {
   background-color: #f2f2f2;
+  outline: none;
 
   font-size: 14px;
   line-height: 26px;
@@ -328,6 +338,7 @@ body {
 }
 
 .hotel-search-form input:focus {
+  outline: solid 2px #e5e5e5;
   background-color: #ffffff;
 }
 
@@ -343,9 +354,11 @@ body {
   border: none;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 .popup-button {
+  outline: none;
   cursor: pointer;
   background-color: #766357;
   border: none;
@@ -460,6 +473,7 @@ body {
   min-height: 58px;
 
   background-color: #81b3d2;
+  outline: none;
 }
 
 .submit-button:focus,
@@ -475,6 +489,18 @@ body {
 /* Inner-Page */
 
 /* inner-page/Filer */
+
+.price-controls input::-webkit-inner-spin-button,
+.price-controls input::-webkit-outer-spin-button {
+
+  -webkit-appearance: none;
+
+  appearance: none;
+}
+
+.price-controls input {
+  outline: none;
+}
 
 .range {
   margin-bottom: 27px;
@@ -557,6 +583,14 @@ body {
   left: 0;
   position: absolute;
   content: url("../img/checkbox-on.svg");
+}
+
+.checkbox input[type="checkbox"]:disabled + label::before {
+  content: url("../img/checkbox-disabled.svg");
+}
+
+.checkbox input[type="checkbox"]:checked:disabled + label::before {
+  content: url("../img/checkbox-checked-disabled.svg");
 }
 
 .price-controls {
@@ -649,6 +683,8 @@ body {
 .range-toggle:hover,
 .range-toggle:focus {
   background: #1c4f80;
+  border: 9px solid #ffffff;
+  top: -10px;
 }
 
 .range-toggle-min {
