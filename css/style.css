@@ -21,7 +21,7 @@ body {
 }
 
 .main-page .main-header {
-  background-color: #f2f2f2;
+  background-color: lightblue;
   background-image: url("../img/index-background.jpg");
   background-repeat: no-repeat;
   background-position: 0px -27px;
@@ -663,6 +663,7 @@ body {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
   padding-left: 65px;
   width: 90px;
 
@@ -870,6 +871,7 @@ body {
 
 .button-more {
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   padding: 3px 16px;
   margin-right: 3px;
@@ -897,6 +899,7 @@ body {
 
 .button-reserve {
   display: inline-block;
+  vertical-align: middle;
   padding: 3px 16px;
 
   line-height: 21px;
@@ -943,6 +946,7 @@ body {
   height: 17px;
   margin-left: 2px;
   display: inline-block;
+  vertical-align: top;
 }
 
 /* Footer */
@@ -1354,6 +1358,10 @@ body {
 .adults-wrapper label,
 .child-wrapper label {
   margin-right: auto;
+}
+
+.find-us {
+  min-height: 593px;
 }
 
 /* сетка footer */
