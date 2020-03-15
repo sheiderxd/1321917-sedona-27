@@ -29,9 +29,6 @@ body {
 
 .inner-page main {
   background-color: #ffffff;
-  background-image: url("../img/filter-background.jpg");
-  background-repeat: no-repeat;
-  background-position: 0px -295px;
 }
 
 .visually-hidden {
@@ -166,6 +163,13 @@ body {
   margin-top: -4px;
 }
 
+.filters {
+  background-color: #5496bd;
+  background-image: url(../img/filter-background.jpg);
+  background-repeat: no-repeat;
+  background-position: 0px -295px;
+}
+
 .filter-form {
   margin: 0;
   padding: 0;
@@ -231,10 +235,6 @@ body {
 .sorting-item:last-of-type {
   margin-left: auto;
   margin-right: 0;
-}
-
-.sorting-item label {
-  margin-right: 32px;
 }
 
 .sorting-item p {
@@ -764,9 +764,7 @@ body {
   margin: 0;
 }
 
-.sorting-label {
-  cursor: pointer;
-
+.sorting-item a {
   font-size: 12px;
   line-height: 15px;
   color: rgba(0, 0, 0, 0.3);
@@ -774,27 +772,27 @@ body {
   border-bottom: dashed 1px #81b3d2;
 }
 
-.sorting label:active {
+.sorting-item a:hover {
+  color: #81b3d2;
+}
+
+.sorting-item a:active {
   color: #000000;
   border-color: transparent;
 }
 
-.sorting-label:hover {
-  color: #81b3d2;
-}
-
-.sort-button:checked + label {
-  color: #81b3d2;
+.sorting-item .active-link,
+.sorting-item .active-link:hover,
+.sorting-item .active-link:focus {
+  color: #000000;
   border-color: transparent;
 }
 
-.sorting-down-icon,
-.sorting-up-icon {
-  cursor: pointer
+.sorting-item:nth-child(2) a {
+  margin-right: 32px;
 }
 
 .sorting-up-icon::before {
-  cursor: pointer;
   content: "";
 
   position: absolute;
@@ -810,7 +808,6 @@ body {
 }
 
 .sorting-down-icon::before {
-  cursor: pointer;
   content: "";
 
   position: absolute;
@@ -832,7 +829,8 @@ body {
 
 .sorting-up-icon:active::before,
 .sorting-down-icon:active::before,
-.sort-btn:checked + label::before {
+.sorting-icon-active:before,
+.sorting-icon-active:hover:before {
   border-bottom-color: #81b3d2;
 }
 

@@ -67,8 +67,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="range-toggle range-toggle-min" tabindex="0"></div>
-                <div class="range-toggle range-toggle-max" tabindex="0"></div>
+                <div class="range-toggle range-toggle-min" tabindex="0"><span class="visually-hidden">Ползунок уменьшения цены</span></div>
+                <div class="range-toggle range-toggle-max" tabindex="0"><span class="visually-hidden">Ползунок увеличения цены</span></div>
               </div>
               <button class="filter-button" type="submit">Показать</button>
             </div>
@@ -76,26 +76,21 @@
         </section>
         <section class="result">
           <h2 class="visually-hidden">Результат поиска</h2>
-          <form class="sorting">
+          <section class="sorting">
             <div class="sorting-item">
               <h3>Найдено: 3</h3>
             </div>
             <div class="sorting-item">
               <p>сортировка:</p>
-              <input type="radio" id="radio-price" class="sort-button visually-hidden" name="sorting" checked>
-              <label for="radio-price" class="sorting-label">По цене</label>
-              <input type="radio" id="radio-type" class="sort-button visually-hidden" name="sorting">
-              <label for="radio-type" class="sorting-label">По типу</label>
-              <input type="radio" id="radio-rate" class="sort-button visually-hidden" name="sorting">
-              <label for="radio-rate" class="sorting-label">По рейтингу</label>
+              <a class="active-link">По цене</a>
+              <a href="#">По типу</a>
+              <a href="#">По рейтингу</a>
             </div>
             <div class="sorting-item">
-              <input type="radio" id="sorting-up" class="sort-btn visually-hidden" name="sorting-direction" checked>
-              <label for="sorting-up" class="sorting-up-icon sorting-icon"><span class="visually-hidden">По возростанию</span></label>
-              <input type="radio" id="sorting-down" class="sort-btn visually-hidden" name="sorting-direction">
-              <label for="sorting-down" class="sorting-down-icon"><span class="visually-hidden">По убыванию</span></label>
+              <a class="sorting-up-icon sorting-icon-active"><span class="visually-hidden">По возростанию</span></a>
+              <a href="#" class="sorting-down-icon"><span class="visually-hidden">По убыванию</span></a>
             </div>
-          </form>
+          </section>
           <ol class="result-list">
             <li class="result-item">
               <div class="result-wrapper">
