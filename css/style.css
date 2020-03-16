@@ -832,6 +832,11 @@ body {
   border-bottom: 10px solid #cacaca;
 }
 
+.sorting-down-icon,
+.sorting-up-icon {
+  outline: none;
+}
+
 .sorting-down-icon:hover::before,
 .sorting-up-icon:hover::before,
 .sorting-down-icon:focus::before,
