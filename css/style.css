@@ -624,6 +624,10 @@ body {
   content: url("../img/checkbox-off.svg");
 }
 
+.checkbox input[type="checkbox"]:focus + label {
+  outline: 2px solid #81b3d2;
+}
+
 .checkbox input[type="checkbox"]:checked + label::before {
   top: -1px;
   left: 0;
@@ -772,7 +776,7 @@ body {
   margin-right: 47px;
 }
 
-.sorting-item a {
+.sorting-type a {
   font-size: 12px;
   line-height: 15px;
   color: rgba(0, 0, 0, 0.3);
@@ -780,19 +784,21 @@ body {
   border-bottom: dashed 1px #81b3d2;
 }
 
-.sorting-item a:hover {
+.sorting-type a:hover,
+.sorting-type a:focus {
+  outline: none;
   color: #81b3d2;
 }
 
-.sorting-item a:active {
+.sorting-type a:active {
   color: #000000;
   border-color: transparent;
 }
 
-.sorting-item .active-link,
-.sorting-item .active-link:hover,
-.sorting-item .active-link:focus {
-  color: #000000;
+.sorting-type .active-link,
+.sorting-type .active-link:hover,
+.sorting-type .active-link:focus {
+  color: #81b3d2;
   border-color: transparent;
 }
 
@@ -827,14 +833,15 @@ body {
 }
 
 .sorting-down-icon:hover::before,
-.sorting-up-icon:hover::before {
+.sorting-up-icon:hover::before,
+.sorting-down-icon:focus::before,
+.sorting-up-icon:focus::before {
   border-bottom-color: black;
 }
 
 .sorting-up-icon:active::before,
 .sorting-down-icon:active::before,
-.sorting-icon-active:before,
-.sorting-icon-active:hover:before {
+.sorting-direction .sorting-icon-active:before {
   border-bottom-color: #81b3d2;
 }
 
@@ -1058,17 +1065,17 @@ body {
   margin-bottom: 0px;
 }
 
-.navigation-item:nth-of-type(1) a,
-.navigation-item:nth-of-type(2) a,
-.navigation-item:nth-of-type(5) a,
-.navigation-item:nth-of-type(6) a {
+.navigation-item:nth-of-type(1),
+.navigation-item:nth-of-type(2),
+.navigation-item:nth-of-type(5),
+.navigation-item:nth-of-type(6) {
   text-align: left;
 }
 
-.navigation-item:nth-of-type(3) a,
-.navigation-item:nth-of-type(4) a,
-.navigation-item:nth-of-type(7) a,
-.navigation-item:nth-of-type(8) a {
+.navigation-item:nth-of-type(3),
+.navigation-item:nth-of-type(4),
+.navigation-item:nth-of-type(7),
+.navigation-item:nth-of-type(8) {
   text-align: right;
 }
 
@@ -1113,6 +1120,10 @@ body {
 .main-header-logo:hover,
 .main-header-logo:focus {
   outline: none;
+}
+
+.main-header-logo:focus {
+  outline: 2px solid #81b3d2;
 }
 
 .main-logo {
