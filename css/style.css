@@ -1394,6 +1394,7 @@ body {
 .google-map {
   position: absolute;
   z-index: 0;
+  border: 0;
 }
 
 /* сетка footer */
