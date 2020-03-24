@@ -327,6 +327,7 @@ body {
   overflow: auto;
   width: 568px;
   padding: 0 55px;
+  padding-top: 55px;
   box-sizing: border-box;
 }
 
@@ -398,6 +399,8 @@ body {
   line-height: 26px;
   color: #ffffff;
   font-weight: 700;
+
+  z-index: 20;
 
   padding: 20px;
   width: 568px;
@@ -1315,12 +1318,15 @@ body {
   align-items: center;
   width: 568px;
   height: 395px;
-  padding-top: 55px;
   box-sizing: border-box;
+
+  transition-duration: 1s;
+  transform: translateX(-50%) translateY(0px);
 }
 
 .modal-close {
-  display: none;
+  transform: translateX(-50%) translateY(-481px);
+  height: 0;
 }
 
 .hotel-search-form label {
