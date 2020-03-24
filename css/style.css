@@ -334,8 +334,7 @@ body {
 .hotel-search-form {
   position: absolute;
   bottom: 205px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 316px;
   z-index: 10;
 
   font-size: 14px;
@@ -1321,11 +1320,11 @@ body {
   box-sizing: border-box;
 
   transition-duration: 1s;
-  transform: translateX(-50%) translateY(0px);
+  transform: translateY(0px);
 }
 
 .modal-close {
-  transform: translateX(-50%) translateY(-481px);
+  transform: translateY(-481px);
   height: 0;
 }
 
